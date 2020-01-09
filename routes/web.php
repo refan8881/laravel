@@ -46,8 +46,27 @@ Route::get('profi',function()
 // {
 //     return view('n');
 // });
-route::get('pesan/{makanan}/{minum}/{harga}',function($mkn,$mnm,$hrg){
+route::get('anan}/{minum}/{harga}',function($mkn,$mnm,$hrg){
     return 'Makanan Yang Saya Pesan Adalah : '.$mkn.'<br>'
     .'Minuman : '.$mnm.'<br>'
     .'Total Harga : '.$hrg;
+});
+// route optional parameter
+route::get('halo/{nama?}',function($nama='refan'){
+    return 'hallo nama saya adalah '.$nama;
+});
+// latihan route optional parameter
+Route::get('pesanan/{makanan?}/{minuman?}/{harga?}',function($makan=null,$minum=null,$hrg=null){
+    if (isset($makan)){
+        echo "anda memesan : ".$makan;
+    }
+    if (isset($minum)){
+        echo "dan : ".$minum;
+    }
+    if (isset($hrg)){
+        echo "dengan harga : ".$hrg;
+    }
+    if ($makan == null && $minum == null && $hrg == null){
+        echo "Anda Belum Memesan";
+    }
 });
