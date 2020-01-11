@@ -11,10 +11,10 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
-        $posts =[
-            ['title'=>'tips cepat meniikahh','content'=>'lorem ipsum'],
-            ['title'=>'harus menunda nikah','content'=>'lorem ipsum'],
-            ['title'=>'membangun visi misi keluarga','content'=>'lorem ipsum']
+        $posts = [
+            ['title' => 'tips cepat meniikahh', 'content' => 'lorem ipsum'],
+            ['title' => 'harus menunda nikah', 'content' => 'lorem ipsum'],
+            ['title' => 'membangun visi misi keluarga', 'content' => 'lorem ipsum']
         ];
 
         DB::table('posts')->insert($posts);
