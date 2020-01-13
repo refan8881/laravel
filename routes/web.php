@@ -97,3 +97,20 @@ route::get('data-gaji/{id}', function ($id) {
     $gaji = App\Penggajian::FindOrFail($id);
     return $gaji;
 });
+route::get('tambah-data-gaji', function () {
+    $gaji = new App\Penggajian();
+    $gaji->nama = 'indah mambo';
+});
+Route::get('haloo', 'LaravelController@hallo');
+route::get('haloo1', 'LaravelController@hallo1');
+route::get('haloo2', 'LaravelController@hallo2');
+route::get('haloo3', 'LaravelController@hallo3');
+route::get('haloo4', 'LaravelController@hallo4');
+route::get('haloo5', 'LaravelController@hallo5');
+route::get('haloo6', 'LaravelController@hallo6');
+route::get('haloo7', 'LaravelController@hallo7');
+route::get('haloo8', 'LaravelController@hallo8');
+route::get('haloo9', 'LaravelController@hallo9');
+route::get('warnakucing{warna}', 'LaravelController@jeniskucing');
+route::get('makan/{cemilan?}', 'LaravelController@tuang');
+route::get('mesena/{makan?}/{harga?}', 'LaravelController@mesen');
