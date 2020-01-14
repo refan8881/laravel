@@ -63,14 +63,17 @@ class LaravelController extends Controller
         if ($makan) {
             echo "Anda  Membeli " . $makan;
         }
-        if ($harga > 15000) {
+        if ($harga >= 15000) {
             echo " Dengan Ukuran Jumbo ";
         }
         if ($harga < 15000 && $harga >= 7500) {
             echo " Dengan Ukuran Medium ";
         }
-        if ($harga < 7500) {
+        if (!$harga < 7500) {
             echo " Dengan Ukuran Small ";
+        }
+        if (!$makan) {
+            echo "silakan memesan terlebih dahulu";
         }
     }
 }
