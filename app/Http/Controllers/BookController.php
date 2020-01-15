@@ -52,7 +52,7 @@ class BookController extends Controller
     }
     public function latihan1()
     {
-        $a = Book::select('')->take(3)->get('title', 'publisher', 'pages', 'prize');
+        $a = Book::select('title', 'publisher', 'pages', 'prize')->take(3)->get();
         return $a;
     }
 }
