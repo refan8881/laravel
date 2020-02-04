@@ -127,3 +127,7 @@ route::get('1', 'BookController@latihan1');
 // route::get('22edit/{id}/edit', 'NgodingController@edit');
 // route::delete('ngoding/{id}/delete', 'NgodingController@destroy');
 route::resource('ngoding', 'NgodingController');
+route::get('passing', 'PracticeController@pass');
+route::get('passing1', 'PracticeController@pass1');
+route::get('passing2', 'PracticeController@pass2');
+route::get('passing3', 'BarangController@index');
