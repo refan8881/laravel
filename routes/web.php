@@ -131,3 +131,21 @@ route::get('passing', 'PracticeController@pass');
 route::get('passing1', 'PracticeController@pass1');
 route::get('passing2', 'PracticeController@pass2');
 route::get('passing3', 'BarangController@index');
+
+
+
+
+
+//book route
+route::resource('buku', 'BookController');
+route::resource('barang', 'BarangController');
+//blade
+route::get('home', function () {
+    return view('home');
+});
+route::get('about', function () {
+    return view('about');
+});
+route::get('contact', function () {
+    return view('contact');
+});

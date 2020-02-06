@@ -16,7 +16,7 @@ class BarangController extends Controller
     {
 
         $barang = Barang::all()->take(5);
-        return view('barang', ['dabar' => $barang]);
+        return view('barang.index', compact('barang'));
     }
 
     /**
@@ -46,9 +46,10 @@ class BarangController extends Controller
      * @param  \App\Barang  $barang
      * @return \Illuminate\Http\Response
      */
-    public function show(Barang $barang)
+    public function show($id)
     {
-        //
+        $barang = Barang::findOrFail($id);
+        return view('barang.show', compact('barang'));
     }
 
     /**
